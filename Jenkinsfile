@@ -17,4 +17,4 @@
  * under the License.
  */
 
-asfMavenTlpStdBuild( 'os' : [ "windows" ] , 'jdks' : [ "8" ] , 'maven' : [ "3.5.0"] )
+asfMavenTlpStdBuild( 'os' : [ "windows" ] , 'jdks' : ["8"] , 'maven' : [ "3.5.0"] )
