@@ -28,6 +28,10 @@ under the License.
     <module>supplemental-models</module>
     <module>deficient-dep</module>
   </modules>
+  <properties>
+    <maven.compiler.target>1.6</maven.compiler.target>
+    <maven.compiler.source>1.6</maven.compiler.source>
+  </properties>
   
   <distributionManagement>
     <repository>
