@@ -368,6 +368,7 @@ under the License.
           </plugin>
           <plugin>
             <artifactId>maven-invoker-plugin</artifactId>
+            <version>3.0.1</version>
             <executions>
               <execution>
                 <id>install-descriptor</id>
