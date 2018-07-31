@@ -39,6 +39,7 @@ public class BootstrapInstaller
             File bootstrapDir = TestUtils.getTestDir( "bootstrap" );
             
             Verifier verifier = TestUtils.newVerifier( bootstrapDir );
+            verifier.getSystemProperties().setProperty( "https.protocols", System.getProperty( "https.protocols", "TLSv1.2" ) );
             
             verifier.executeGoal( "deploy" );
             

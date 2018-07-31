@@ -43,6 +43,7 @@ public class IT_BadDependencyPoms
         Verifier verifier = TestUtils.newVerifier( dir );
         verifier.deleteArtifacts( "test" );
         verifier.getSystemProperties().setProperty( "it.dir", dir.getAbsolutePath() );
+        verifier.getSystemProperties().setProperty( "https.protocols", System.getProperty( "https.protocols" ) );
         
         try
         {
