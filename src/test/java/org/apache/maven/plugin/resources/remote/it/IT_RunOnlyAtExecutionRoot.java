@@ -44,6 +44,8 @@ public class IT_RunOnlyAtExecutionRoot
 
         verifier = TestUtils.newVerifier( new File( dir, "resource-projects" ) );
         verifier.executeGoal( "deploy" );
+        verifier.setLogFileName( "first.log" );
+        verifier.displayStreamBuffers();
         verifier.verifyErrorFreeLog();
         verifier.resetStreams();
 
@@ -58,6 +60,7 @@ public class IT_RunOnlyAtExecutionRoot
         // verifier.deleteArtifacts( "org.apache.maven.plugin.rresource.it.mrr41" );
 
         verifier.executeGoal( "generate-resources" );
+        verifier.displayStreamBuffers();
         verifier.verifyErrorFreeLog();
         verifier.resetStreams();
 
