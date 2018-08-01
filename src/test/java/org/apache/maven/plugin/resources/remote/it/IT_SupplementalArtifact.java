@@ -44,7 +44,6 @@ public class IT_SupplementalArtifact
         Verifier verifier;
 
         verifier = TestUtils.newVerifier( resources );
-        verifier.getSystemProperties().setProperty( "https.protocols", System.getProperty( "https.protocols" ) );
         
         verifier.deleteArtifacts( "org.apache.maven.plugin.rresource.it.mrr43" );
 

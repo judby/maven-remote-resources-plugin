@@ -43,7 +43,6 @@ public class IT_GetDependencyProjects
         Verifier verifier;
 
         verifier = TestUtils.newVerifier( dir );
-        verifier.getSystemProperties().setProperty( "https.protocols", System.getProperty( "https.protocols" ) );
         verifier.executeGoal( "deploy" );
         verifier.verifyErrorFreeLog();
         verifier.resetStreams();

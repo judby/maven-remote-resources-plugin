@@ -41,7 +41,6 @@ public class IT_GenerateFromBundle
         verifier.executeGoal( "generate-resources" );
         verifier.verifyErrorFreeLog();
         verifier.resetStreams();
-        verifier.getSystemProperties().setProperty( "https.protocols", System.getProperty( "https.protocols" ) );
         
         File output = new File( dir, "target/maven-shared-archive-resources/DEPENDENCIES" );
         String content = FileUtils.fileRead( output );
