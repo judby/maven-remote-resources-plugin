@@ -37,6 +37,7 @@ public class IT_CustomFilterDelimiter
     {
         File dir = TestUtils.getTestDir( "custom-filter-delim" );
         Verifier verifier = TestUtils.newVerifier( dir );
+        verifier.getSystemProperties().setProperty( "https.protocols", System.getProperty( "https.protocols" ) );
         
         verifier.getCliOptions().add( "-X" );
         

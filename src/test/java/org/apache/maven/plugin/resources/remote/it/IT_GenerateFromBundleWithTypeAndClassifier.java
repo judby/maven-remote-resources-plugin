@@ -35,8 +35,10 @@ public class IT_GenerateFromBundleWithTypeAndClassifier
     public void test()
         throws IOException, URISyntaxException, VerificationException
     {
+        
         File dir = TestUtils.getTestDir( "generate-from-bundle-with-type-and-classifier" );
         Verifier verifier = TestUtils.newVerifier( dir );
+        verifier.getSystemProperties().setProperty( "https.protocols", System.getProperty( "https.protocols" ) );
         
         verifier.executeGoal( "generate-resources" );
         verifier.verifyErrorFreeLog();

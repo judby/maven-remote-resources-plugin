@@ -43,6 +43,7 @@ public class IT_RunOnlyAtExecutionRoot
         Verifier verifier;
 
         verifier = TestUtils.newVerifier( new File( dir, "resource-projects" ) );
+        verifier.getSystemProperties().setProperty( "https.protocols", System.getProperty( "https.protocols" ) );
         verifier.executeGoal( "deploy" );
         verifier.verifyErrorFreeLog();
         verifier.resetStreams();
